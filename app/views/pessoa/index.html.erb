@@ -3,7 +3,7 @@
 <ul>
 	<% @pessoas.each do |pessoa| %>
 		<li>
-			<%= pessoa.nome %>
+			<%= link_to pessoa.nome, pessoa_path(pessoa) %>
 		</li>
 	<% end %>
 </ul>
