@@ -1,6 +1,7 @@
 Trocalivro::Application.routes.draw do
-  get "pessoa/index"
-
+  #match '/pessoa' => 'pessoa#index'
+	#match 'pessoa/:id' => 'pessoa#show'
+	resources :pessoa
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

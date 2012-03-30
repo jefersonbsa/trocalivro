@@ -1,2 +1,11 @@
-<h1>Pessoa#index</h1>
+<h1>Listando Pessoas</h1>
+
+<ul>
+	<% @pessoas.each do |pessoa| %>
+		<li>
+			<%= link_to pessoa.nome, pessoa_path(pessoa) %>
+		</li>
+	<% end %>
+</ul>
+
 <p>Find me in app/views/pessoa/index.html.erb</p>
