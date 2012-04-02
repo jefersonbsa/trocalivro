@@ -1,3 +1,3 @@
 class Pessoa < ActiveRecord::Base
-  has_many :interesses
+  has_many :vontades
 end

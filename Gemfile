@@ -12,7 +12,7 @@ gem 'heroku'
 
 #necessario para funcionar no heroku
 group :prodution do
-	gem	'pg'
+	gem	'sqlite3'
 end
 
 # Gems used only for assets and not required
