@@ -14,6 +14,7 @@ class PessoasController < ApplicationController
 	def create
 		@pessoa = Pessoa.new(params[:pessoa])
 		@pessoa.save
+		redirect_to pessoa_path(@pessoa)
 	end
 
 end
