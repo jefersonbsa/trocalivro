@@ -14,6 +14,15 @@ class PessoasController < ApplicationController
 	def create
 		@pessoa = Pessoa.new(params[:pessoa])
 		@pessoa.save
+		flash[:message] = "Usuario '#{@pessoa.nome}' criado!"
+		redirect_to pessoa_path(@pessoa)
+	end
+
+	def destroy
+		@pessoa = Pessoa.find(params[:id])
+		@pessoa.destroy
+		flash[:message] = "Usuario '#{@pessoa.nome}' removido!"
+		redirect_to pessoas_path
 	end
 
 end
